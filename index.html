@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <a href="#/index">hash=aaaa/bcd 匹配/aaaa/:id</a>
+  </div>
+  <div>
+    <a href="#/det">hash=bbbb 匹配/bbbb(/:name)</a>
+  </div>
+  <div>
+    <a href="#/bbbb/ddd">hash=bbbb/ddd 匹配/bbbb(/:name)</a>
+  </div>
+  <div>
+    <a href="#/cccc/s/d">hash=cccc/s/d 匹配cccc/*</a>
+  </div>
+  <div class="test">
+  </div>
+  <script src="https://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+  <script src="./router/index.js"></script>
+  <script src="./router/router.js"></script>
+  <script>
+    var router = new Router();
+    router.config(_CONFIG)
+    router.init();
+  </script>
+</body>
+
+</html>
